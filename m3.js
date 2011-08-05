@@ -42,6 +42,12 @@ var doNext = function () {
   el.onload = function () {
     addText(p)();
   }
+  scriptEl.onreadystatechange = function () {
+    if ((this.readyState === "complete") || 
+        (this.readyState === "loading")) {
+      addText(p)();
+    }
+  };
   document.getElementsByTagName("head")[0].appendChild(el);
 }
 doNext();
