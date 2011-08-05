@@ -42,7 +42,7 @@ var doNext = function () {
   el.onload = function () {
     addText(p)();
   }
-  scriptEl.onreadystatechange = function () {
+  el.onreadystatechange = function () {
     if ((this.readyState === "complete") || 
         (this.readyState === "loading")) {
       addText(p)();
