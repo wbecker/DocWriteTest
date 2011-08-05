@@ -38,7 +38,7 @@ var doNext = function () {
     }
   }
   var el = document.createElement("script");
-  el.src=s[i];
+  el.src="../"+s[i];
   el.onload = function () {
     addText(p)();
   }
